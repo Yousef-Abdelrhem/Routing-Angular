@@ -6,8 +6,8 @@ import { ErrorComponent } from './Day5/Routing/error/error.component';
 
 export const routes: Routes = [
     {path: '', component: StudentsComponent},
-    {path: 'students', component: StudentsComponent},
-    {path: 'students/:id', component: StudentDetailsComponent},
-    {path: 'profile', component: ProfileComponent},
+    {path: 'user', component: StudentsComponent},
+    {path: 'user/:id', component: StudentDetailsComponent},
+    // {path: 'profile', component: ProfileComponent},
     {path: '**', component: ErrorComponent},
 ];

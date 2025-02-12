@@ -1,16 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-student-details',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './student-details.component.html',
   styleUrl: './student-details.component.css'
 })
 export class StudentDetailsComponent {
-  ID: number = 0;
+  id: number = 0;
+  Id = 'id';
   constructor(ActiveRouted: ActivatedRoute){
-    // console.log();
-    this.ID = ActiveRouted.snapshot.params['id'];
+    this.id = ActiveRouted.snapshot.params['id'];
   }
 }
