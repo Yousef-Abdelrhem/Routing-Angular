@@ -1,13 +1,12 @@
 import { Routes } from '@angular/router';
-import { StudentDetailsComponent } from './Day5/Routing/student-details/student-details.component';
-import { StudentsComponent } from './Day5/Routing/students/students.component';
-import { ProfileComponent } from './Day5/Routing/profile/profile.component';
-import { ErrorComponent } from './Day5/Routing/error/error.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { ErrorComponent } from './Components/error/error.component';
+import { UserComponent } from './Components/user/user.component';
+import { UserDetailsComponent } from './Components/user-details/user-details.component';
 
 export const routes: Routes = [
-    {path: '', component: StudentsComponent},
-    {path: 'user', component: StudentsComponent},
-    {path: 'user/:id', component: StudentDetailsComponent},
-    // {path: 'profile', component: ProfileComponent},
-    {path: '**', component: ErrorComponent},
+    {path: '', component: UserComponent },
+    {path: 'header', component: HeaderComponent },
+    {path: 'users/:id', component: UserDetailsComponent },
+    {path: '**', component: ErrorComponent },
 ];
