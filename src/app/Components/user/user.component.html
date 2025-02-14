@@ -1,10 +1,19 @@
-@for(user of Users; track user.id){
-<div
-  class="container alert alert-primary w-75 d-flex flex-column justify-content-center align-items-center"
->
-  <div>Name : {{ user.name }}</div>
-  <div>
-    Email: <a routerLink="/users/{{ user.id }}">{{ user.email }}</a>
+<section class="container">
+  <a routerLink="/addUser" href="" class="d-flex justify-content-center mb-3"
+    ><img class="add" src="add.svg" alt=""
+  /></a>
+  <div class="row">
+    @for(user of Users; track user.id){
+    <div class="col-md-6 col-md-3">
+      <span
+        class="container card alert alert-primary w-100 d-flex justify-content-center align-items-center col-md-5 mb-3"
+      >
+        <div>Name : {{ user.name }}</div>
+        <div>
+          Email: <a routerLink="/users/{{ user.id }}">{{ user.email }}</a>
+        </div>
+      </span>
+    </div>
+    }
   </div>
-</div>
-}
+</section>

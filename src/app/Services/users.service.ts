@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsersService {
-  private readonly URL = 'https://jsonplaceholder.typicode.com/users';
+  private readonly URL = 'http://localhost:3000/users';
   constructor(private http : HttpClient) { }
 
   getAllUsers(){
@@ -13,5 +13,8 @@ export class UsersService {
   }
   getUserByID(id: number){
     return this.http.get(this.URL + '/' + id);
+  }
+  addUser(user: any){
+   return this.http.post(this.URL ,user)
   }
 }

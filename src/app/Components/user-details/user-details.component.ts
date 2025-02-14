@@ -11,6 +11,7 @@ import { UsersService } from '../../Services/users.service';
 })
 export class UserDetailsComponent {
   ID = 0;
+
   user: any = {};
   constructor(private ActivatedRoute : ActivatedRoute,private usersService : UsersService){
     this.ID = ActivatedRoute.snapshot.params['id'];
