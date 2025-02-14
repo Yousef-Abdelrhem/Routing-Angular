@@ -1,3 +1,10 @@
-<div class="container alert alert-primary w-75 d-flex justify-content-center">
-  <p>user works!</p>
+@for(user of Users; track user.id){
+<div
+  class="container alert alert-primary w-75 d-flex flex-column justify-content-center align-items-center"
+>
+  <div>Name : {{ user.name }}</div>
+  <div>
+    Email: <a routerLink="/users/{{ user.id }}">{{ user.email }}</a>
+  </div>
 </div>
+}

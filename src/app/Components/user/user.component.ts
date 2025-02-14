@@ -11,15 +11,16 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './user.component.css'
 })
 export class UserComponent implements OnInit {
+  Users: any ;
   constructor(private usersService : UsersService){
   }
 
   ngOnInit(): void{
       this.usersService.getAllUsers().subscribe(
         {
-          next: (data) => {console.log(data)},
+          next: (data) => {this.Users = data},
           error: (error) => {console.log(error)},
-          complete: () => {console.log("The completed")}
+          // complete: () => {}
         }
       );
   }
